@@ -42,7 +42,7 @@ namespace ArenaBattle
             isGameOver = false;
 
             //Initialize arena
-            Image terain = Properties.Resources.dungeon;
+            Image terain = Properties.Resources.desert;//here you can change background {dungeon, desert, fantasy_forest, ruinded_fantasy_city}
             arena.Width = this.Width;
             arena.Height = this.Height;
             arena.BackgroundImage = terain;
@@ -407,7 +407,7 @@ namespace ArenaBattle
                 bulletTimer.Stop();
             }
 
-            
+           
         }
 
 
@@ -416,6 +416,8 @@ namespace ArenaBattle
             if (isGameOver)
             {
                 countdown.Stop();
+                MessageBox.Show("Tie!");
+                bulletTimer.Stop();
             }
             if (seconds <= 0)
             {
